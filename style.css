@@ -1,0 +1,41 @@
+/* background*/
+body {
+    background-image: url(http://78.media.tumblr.com/e5da3cb3fbe9af8f2198f3459e72424a/tumblr_inline_n258tklDt11qhwjx8.png);
+    padding-top: 70px;
+    font-family: Lobster;
+    
+}
+/* size for logo in navbar */
+.img-sizing{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    
+}
+/* Size for logo in footer*/
+.img-sizing2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+    display: block;
+    }
+/* margin for button goto top */
+.mb{
+    margin-bottom: 10px;
+}
+/* margin for gallery*/
+.top-buffer { margin-top:40px;            
+
+}
+/* color for h1*/
+#text-red{
+    color: indianred;
+}
+
+/* font for form */
+.form-font{
+    font-family: cursive;
+}
