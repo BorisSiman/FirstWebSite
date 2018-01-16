@@ -9,10 +9,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 </head>
-<body> 
-
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    
 <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -40,9 +40,8 @@
     <div class="container">
 
       <div class="jumbotron">
-        <h1 class="text-center" id="text-red">My website</h1>
-        <p>This is example text</p>
-        <p>This is just a plain text.</p>
+        <h1 class="text-center" id="text-red">What is Lorem Ipsum?</h1>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
       </div>
 
     </div> <!-- /container -->
@@ -53,9 +52,8 @@
      <div class="container">
 
       <div class="jumbotron">
-        <h1 class="text-center" id="text-red">About us</h1>
-        <p>Some text.</p>
-        <p>This is just a plain example.</p>
+        <h1 class="text-center" id="text-red">Where does it come from?</h1>
+        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
       </div>
 
     
@@ -123,28 +121,20 @@
         
         <!-- /container -->
 
-    
-    <div class="text-center mb">
-        <button onclick="topFunction()" class="btn btn-default scrollToTop">Jump to Top</button>
-    
+    <div class="btnfloating">
+        <button onclick="topFunction()" class="btn btn-xs scrollToTop"><span class="glyphicon glyphicon-chevron-up"></span></button>
     </div>
-
-    <footer class="footer navbar-default">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-6 text-left"><span class="glyphicon glyphicon-asterisk"></span>My WebSite<span class="glyphicon glyphicon-asterisk"></span></div>
-                <div class="col-xs-6 text-right">HTML5-CSS-BOOTSRAP</div>
-    </div> 
-        </div></footer>
     
-      <div class="navbar-default">
-          <div class="container-fluid">
-        <p class="text-center"><small>Copyright &copy; My Website 2018</small>
-        <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Android_O_Preview_Logo.png" class="img-responsive img-sizing2" align="right" alt="Logo"></a></p></div>
-    </div>
+<footer class="footer navbar-default">
+<div class="container-fluid">
+<div class="col-xs-4">Phone: 03212-5215-21212<br>Email:website@website.com<br>Work time: 00-24h;</div>    
+    <div class="col-xs-4 text-center">Find us on facebook and instagram:<br><button class="btn btn-primary"><a href="http://www.facebook.com">Facebook</a></button> <button class="btn btn-primary"><a href="http://www.instagram.com">Instagram</a></button></div> 
+    <div class="col-xs-4 text-right"><span class="glyphicon glyphicon-star"></span>My Bootstrap Website<span class="glyphicon glyphicon-star"></span></div> 
+</div>        
+</footer>
 
  <script>
- //function scroll to top   
+      //function scroll to top   
 $(document).ready(function(){
 	
 	//Click event to scroll to top
@@ -154,20 +144,14 @@ $(document).ready(function(){
 	});
 	
 });
-//Active click
-$(document).ready(function () {
+     // smooth scroll
+ $(document).ready(function () {
     $(document).on("scroll", onScroll);
     
     //smoothscroll
     $('.nav li a').on('click', function (e) {
         e.preventDefault();
         $(document).off("scroll");
-        
-        $('.nav li.active').each(function () {
-            $(this).removeClass('active');
-        })
-        $(this).addClass('active');
-      
         var target = this.hash,
             menu = target;
         $target = $(target);
@@ -179,19 +163,11 @@ $(document).ready(function () {
         });
     });
 });
-
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
     $('.nav li a').each(function () {
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
-        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('.nav li.active').removeClass("active");
-            currLink.addClass("active");
-        }
-        else{
-            currLink.removeClass("active");
-        }
     });
 }
 </script>    
