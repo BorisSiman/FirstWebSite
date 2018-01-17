@@ -5,27 +5,6 @@ body {
     font-family: Lobster;
     
 }
-/* size for logo in navbar */
-.img-sizing{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 40px;
-    height: 40px;
-    display: block;
-    
-}
-/* Size for logo in footer*/
-.img-sizing2{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 20px;
-    height: 20px;
-    display: block;
-    }
-/* margin for button goto top */
-.mb{
-    margin-bottom: 10px;
-}
 /* margin for gallery*/
 .top-buffer { margin-top:40px;            
 
@@ -42,26 +21,32 @@ body {
 
 .btnfloating{
     position: fixed;
-    bottom: 65px; 
+    bottom: 0px; 
     right: 4px; 
     float: right;    
 }
 footer{
-    max-height: 60px;
-    height: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
-a {
+.btna {
     text-decoration: none;
     color: white;
 }
-a:hover{
+.btna:hover{
     text-decoration: none;
     color:white;
 }
-a:active{
+.btna:active{
     text-decoration: none;
     color: white;
 }
 .cypry{
     background-color:#428BCA;
+}
+a:hover{
+    text-decoration: none;
+}
+.mt-5{
+    margin-top: 5px;
 }

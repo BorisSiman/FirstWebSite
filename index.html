@@ -12,7 +12,8 @@
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-    
+ <!-- Home part selection--> 
+    <selection id="home">   
 <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
@@ -35,8 +36,7 @@
         </div>
     </nav>
     
-<!-- Home part selection--> 
-    <selection id="home">
+
     <div class="container">
 
       <div class="jumbotron">
@@ -91,6 +91,14 @@
     <label>Tell us what you think about our website:</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
   </div>
+    <div class="form-group">
+    <label> Did you check all boxes?</label><input type="checkbox" class="checkbox">
+    </div>
+    <div class="form-group">
+    <label class="radio">Do you want to receive newslatter from us?</label>
+    <input type="radio" name="gender" value="Yes" checked>Yes
+    <input type="radio" name="gender" value="No"> No
+        </div>
     <div class="form-group text-center">
     <button type="submit" class="btn btn-default">Submit</button>
     </div>
@@ -106,14 +114,14 @@
       <div class="jumbotron">
         <h1 class="text-center" id="text-red">Gallery</h1>
         <div class="row top-buffer">
-          <div class="col-xs-4"><img src="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg" class="img-responsive"></div>
-        <div class="col-xs-4"><img src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg" class="img-responsive"></div>
-            <div class="col-xs-4"><img src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg" class="img-responsive"></div>
+            <div class="col-xs-4"><a href="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg"><img src="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg" class="img-responsive"></a><label>Lion</label></div>
+            <div class="col-xs-4"><a href="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg"><img src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg" class="img-responsive"></a><label>Desert fox</label></div>
+            <div class="col-xs-4"><a href="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg"><img src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg" class="img-responsive"></a><label>Panda</label></div>
       </div>
           <div class="row top-buffer">
-          <div class="col-xs-4"><img src="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" class="img-responsive" alt="Picture of animal"></div>
-        <div class="col-xs-4"><img src="https://winflare.com/wp-content/uploads/2017/05/UnderstandingTheBlueWhale_whale.jpg" class="img-responsive" alt="Picture of animal"></div>
-            <div class="col-xs-4"><img src="https://www-tc.pbs.org/wnet/nature/files/2016/12/NW-Snow-Animals_ep-1__010-e1481648547567.jpg" class="img-responsive" alt="Picture of animal"></div>
+              <div class="col-xs-4"><a href="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" class="img-responsive" alt="Picture of animal"><img src="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" class="img-responsive" alt="Picture of animal"></a><label>Tiger</label></div>
+        <div class="col-xs-4"><a href="https://winflare.com/wp-content/uploads/2017/05/UnderstandingTheBlueWhale_whale.jpg"><img src="https://winflare.com/wp-content/uploads/2017/05/UnderstandingTheBlueWhale_whale.jpg" class="img-responsive" alt="Picture of animal"></a><label>Whale</label></div>
+              <div class="col-xs-4"><a href="https://www-tc.pbs.org/wnet/nature/files/2016/12/NW-Snow-Animals_ep-1__010-e1481648547567.jpg"><img src="https://www-tc.pbs.org/wnet/nature/files/2016/12/NW-Snow-Animals_ep-1__010-e1481648547567.jpg" class="img-responsive" alt="Picture of animal"></a><label>Polar bear</label></div>
       </div>          
      </div>
     </div> 
@@ -127,9 +135,9 @@
     
 <footer class="footer navbar-default">
 <div class="container-fluid">
-<div class="col-xs-4">Phone: 03212-5215-21212<br>Email:website@website.com<br>Work time: 00-24h;</div>    
-    <div class="col-xs-4 text-center">Find us on facebook and instagram:<br><button class="btn btn-primary"><a href="http://www.facebook.com">Facebook</a></button> <button class="btn btn-primary"><a href="http://www.instagram.com">Instagram</a></button></div> 
-    <div class="col-xs-4 text-right"><span class="glyphicon glyphicon-star"></span>My Bootstrap Website<span class="glyphicon glyphicon-star"></span></div> 
+<div class="col-xs-4">Phone: 03212-5215-952<br><a href="mailto:Email:website@web.com">Email Us</a><br>Work time: 00-24h;</div>    
+    <div class="col-xs-4 text-center">Find us on facebook,twitter and instagram:<br><button class="btn btn-primary mt-5"><a href="http://www.facebook.com" class="btna">Facebook</a></button> <button class="btn btn-primary mt-5"><a href="http://www.instagram.com" class="btna">Instagram</a></button><br><button class="btn btn-success mt-5"><a href="http://www.twitter.com" class="btna">Twitter</a></button></div> 
+    <div class="col-xs-4"><a href="index.html" class="navbar-brand navbar-right"><span class="glyphicon glyphicon-star"></span>My Bootstrap Website<span class="glyphicon glyphicon-star"></span></a></div> 
 </div>        
 </footer>
     <div class="copyright text-center cypry">    
