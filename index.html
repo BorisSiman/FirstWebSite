@@ -100,7 +100,7 @@
     <input type="radio" name="gender" value="No"> No
         </div>
     <div class="form-group text-center">
-    <button type="submit" class="btn btn-default">Submit</button>
+    <button type="button" class="btn btn-default">Submit</button>
     </div>
 </form>
     </div>
@@ -112,20 +112,80 @@
  <div class="container">
 
       <div class="jumbotron">
-        <h1 class="text-center" id="text-red">Gallery</h1>
-        <div class="row top-buffer">
-            <div class="col-xs-4"><a href="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg"><img src="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg" class="img-responsive"></a><label>Lion</label></div>
-            <div class="col-xs-4"><a href="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg"><img src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg" class="img-responsive"></a><label>Desert fox</label></div>
-            <div class="col-xs-4"><a href="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg"><img src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg" class="img-responsive"></a><label>Panda</label></div>
-      </div>
-          <div class="row top-buffer">
-              <div class="col-xs-4"><a href="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" class="img-responsive" alt="Picture of animal"><img src="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" class="img-responsive" alt="Picture of animal"></a><label>Tiger</label></div>
-        <div class="col-xs-4"><a href="https://winflare.com/wp-content/uploads/2017/05/UnderstandingTheBlueWhale_whale.jpg"><img src="https://winflare.com/wp-content/uploads/2017/05/UnderstandingTheBlueWhale_whale.jpg" class="img-responsive" alt="Picture of animal"></a><label>Whale</label></div>
-              <div class="col-xs-4"><a href="https://www-tc.pbs.org/wnet/nature/files/2016/12/NW-Snow-Animals_ep-1__010-e1481648547567.jpg"><img src="https://www-tc.pbs.org/wnet/nature/files/2016/12/NW-Snow-Animals_ep-1__010-e1481648547567.jpg" class="img-responsive" alt="Picture of animal"></a><label>Polar bear</label></div>
-      </div>          
-     </div>
-    </div> 
+        <h1 class="text-center bot-buffer" id="text-red">Gallery</h1>
+        <!-- Images used to open the lightbox -->
+<div class="row">
+  <div class="column">
+    <img src="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow img-responsive">
+  </div>
+  <div class="column">
+    <img src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow img-responsive">
+  </div>
+  <div class="column">
+    <img src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow img-responsive">
+  </div>
+  <div class="column">
+    <img src="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow img-responsive">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" style="width:100%">
+    </div>
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo img-responsive" src="http://r.ddmcdn.com/w_830/s_f/o_1/cx_98/cy_0/cw_640/ch_360/APL/uploads/2015/07/cecil-AP463227356214-1000x400.jpg" onclick="currentSlide(1)" alt="Lion">
+    </div>
+
+    <div class="column">
+      <img class="demo img-responsive" src="http://animals.sandiegozoo.org/sites/default/files/2016-10/animals_hero_fennec2.jpg" onclick="currentSlide(2)" alt="Desert Fox">
+    </div>
+
+    <div class="column">
+      <img class="demo img-responsive" src="http://animals.sandiegozoo.org/sites/default/files/2016-09/animals_hero_panda.jpg" onclick="currentSlide(3)" alt="Panda">
+    </div>
+
+    <div class="column">
+      <img class="demo img-responsive" src="https://i.ytimg.com/vi/RcTNoTL3nig/maxresdefault.jpg" onclick="currentSlide(4)" alt="Tiger">
+    </div>
+  </div>
+</div>
+    </div>
+        </div>
     </selection>
+    
+
         
         <!-- /container -->
 
@@ -181,6 +241,47 @@ function onScroll(event){
         var currLink = $(this);
         var refElement = $(currLink.attr("href"));
     });
+}
+
+// Open the Modal
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>    
     
